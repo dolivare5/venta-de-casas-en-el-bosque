@@ -7,7 +7,7 @@
 }
 
 html{
-    font-size: 62.5% ;
+    font-size: 62.5%;
     box-sizing: border-box;
 }
 
@@ -48,9 +48,16 @@ img{
 }
 
 .contenedor {
-    max-width: 120rem;
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
+    align-items: stretch;
+}
+
+@media (min-width: 140rem){
+    .contenedor {
+        width: 120rem;
+        align-items: stretch;
+    }
 }
 
 .btn{
@@ -73,4 +80,144 @@ img{
 
 .mt-5{
     margin-top: 5rem;
+}
+
+/* Header */
+.header{
+    min-height: 100vh;
+    background-image: url("../img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+}
+
+@media (min-width: 900px){
+    .header{
+        padding: 2rem 0;
+    }
+}
+
+.contenedor-header{
+    display: flex;
+    flex-direction: column;
+    height: calc(91vh - 4rem);
+    justify-content: space-between;
+    color: var(--blanco);
+}
+
+.nombre-sitio{
+    font-weight: 400;
+    text-align: center;
+    font-size: 4rem;
+}
+
+@media (min-width: 768px){
+    .nombre-sitio{
+        font-size: 5rem;
+    }
+}
+
+.nombre-sitio span{
+    font-weight: 900;
+}
+
+@media (min-width: 1300px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.telefono{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.telefono::before{
+    content: '';
+    display: block;
+    background-image: url("../img/telefono.png");
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 1rem;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header a{
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media (min-width: 820px){
+    .navegacion{
+        flex-direction: row;
+    }
+}
+
+.navegacion a{
+    padding: .5rem;
+    transition: background-color 300ms;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 820px){
+    .navegacion a{
+        padding: 1rem 3rem;
+    }
+}
+
+.navegacion a:hover{
+    background-color: rgba(255 255 255 / .5);
+    color: var(--negro);
+}
+
+.slogan{
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .slogan{
+        text-align: right;
+    }
+}
+
+.slogan p{
+    margin: 0;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.slogan h1{
+    margin: 0;
+    font-size: 3rem;
+}
+
+@media (min-width: 768px){
+    .slogan h1{
+        font-size: 4em;
+    }
+    .slogan p{
+        font-size: 3rem;
+    }
 }
